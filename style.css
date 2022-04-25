@@ -1,0 +1,36 @@
+/*hlavička*/
+.milanos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2 px solid red ;
+    text-decoration: none;
+    color: red;
+    width: 100%;
+    flex-grow: 0;
+    
+    
+}
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+/*formulář*/
+form {
+    width: 20%;
+    margin-left: 60px;
+}
+.formtitle {
+    margin-top: 80px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+.btn-primary:hover {
+background-color: #0d6efd;
+color: rgb(255, 255, 255);
+}
+
+.btn-primary {
+    background-color: white; 
+    color: rgb(22, 22, 22); 
+}
