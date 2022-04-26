@@ -41,7 +41,10 @@ if (isset($_POST ["submit"])){
   echo "<br>";
   echo "Tvoje heslo ".$password;
 }
-
+  else {
+    echo "Vyplnte všechna pole";
+  }
+  
 ?>
 </body>
 </html>
