@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -16,23 +17,31 @@
         ?>
     </header>
     <h1 class="formtitle">Vychutnej si náš formulář</h1>
-    <form>
+    <form method="post" action="index.php">
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Emailová adresa</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <label for="exampleInputEmail1" class="form-label">Uživatelské jméno</label>
+    <input type="text" name="username" class="form-control" id="exampleInputText" div>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Heslo</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
   </div>
   <div class="mb-3 form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Souhlasím s osobníma údajema</label>
   </div>
-  <button type="submit" class="btn btn-primary">Odeslat</button>
+  <button type="submit" name="submit" class="btn btn-primary">Odeslat</button>
 </form>
 <script src="js/bootstrap.js"> </script>
+<?php
+if (isset($_POST ["submit"])){
+  $username = $_POST["username"];
+  $password = $_POST ["password"];
+  echo  "Tvoje uživatelské jméno je ".$username;
+  echo "<br>";
+  echo "Tvoje heslo ".$password;
+}
 
+?>
 </body>
 </html>
