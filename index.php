@@ -34,17 +34,19 @@
 </form>
 <script src="js/bootstrap.js"> </script>
 <?php
-if (isset($_POST ["submit"])){
+if (isset($_POST ["submit"]) && !empty($password) ){
   $username = $_POST["username"];
   $password = $_POST ["password"];
   echo  "Tvoje uživatelské jméno je ".$username;
   echo "<br>";
   echo "Tvoje heslo ".$password;
 }
-  else {
-    echo "Vyplnte všechna pole";
-  }
-  
+
+{
+  if (empty ($password) && isset($_POST ["submit"]))
+    echo ("Vyplnte všechna pole");
+}
+
 ?>
 </body>
 </html>
