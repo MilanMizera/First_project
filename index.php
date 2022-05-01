@@ -41,12 +41,11 @@ if (isset($_POST ["submit"])) {
 
   if (empty ($_POST ["password"]) || empty ($_POST ["username"])) 
     echo ("Vyplnte všechna pole");
-
-    if (!empty ($_POST ["username"]) && !empty ($_POST ["password"]))
+}
+    if (!empty ($_POST ["username"]) && !empty ($_POST ["password"])){
      echo ("Tvoje uživatelské jméno je $username");
      echo "<br>";
      echo ("Tvoje heslo je $password");
-     
 }
 ?>
 </body>
