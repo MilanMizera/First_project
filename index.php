@@ -10,7 +10,28 @@
     <link rel="stylesheet" href="style.css">
 </head> 
 <body>
-    
+<style> 
+/*Stylování echo textu*/ 
+.paragraf {
+    color: red;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.para1 {
+    color: green;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 0px;
+}
+.para2 {
+    color: green;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+</style>
     <header>
         <?php
         include "Header.php";
@@ -33,20 +54,27 @@
   <button type="submit" name="submit" class="btn btn-primary">Odeslat</button>
 </form>
 <script src="js/bootstrap.js"> </script>
-<?php
 
+<?php
+//odeslání dat z formuláře
 if (isset($_POST ["submit"])) {
   $username = $_POST["username"];
   $password = $_POST ["password"];
 
-  if (empty ($_POST ["password"]) || empty ($_POST ["username"])) 
-    echo ("Vyplnte všechna pole");
+  if (empty ($_POST ["password"]) || empty ($_POST ["username"]))
+  echo "<p class='paragraf'>Vyplnte všechna pole</p>";
+
 }
     if (!empty ($_POST ["username"]) && !empty ($_POST ["password"])){
-     echo ("Tvoje uživatelské jméno je $username");
+     echo "<p class='para1'>Tvoje uživatelské jméno je $username</p>";
      echo "<br>";
-     echo ("Tvoje heslo je $password");
+     echo ("<p class='para2'>Tvoje heslo je $password</p>");
 }
+// připojení do databáze
+$connection = mysqli_connect("localhost","root","","megakurzy");
+
+$query = "INSERT INTO mega_kurzy (jmeno,heslo) VALUES ('$username','$password')";
+
 ?>
 </body>
 </html>

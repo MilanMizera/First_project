@@ -23,7 +23,7 @@ form {
 .formtitle, h1 {
     margin-top: 80px;
     margin-left: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     text-shadow: 10px 10px 38px;
   
 }
@@ -38,4 +38,8 @@ color: rgb(255, 255, 255);
 }
 form {
     border: 10 px black;
+}
+.paragraf {
+    color: red;
+    font-size: 30px;
 }
