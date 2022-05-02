@@ -68,11 +68,15 @@ if (isset($_POST ["submit"])) {
     echo "<p class='paragraf'>Vyplnte všechna pole</p>";
   }
 
-  else {
-  echo "<p class='para1'>Tvoje uživatelské jméno je $username</p>";
-  echo "<br>";
-  echo ("<p class='para2'>Tvoje heslo je $password</p>");
+else {
+echo "<p class='para1'>Tvoje uživatelské jméno je $username</p>";
+echo "<br>";
+echo ("<p class='para2'>Tvoje heslo je $password</p>");
 }
+ // připojení do databáze
+ $connection = mysqli_connect("localhost","root","","megakurzy");
+
+ $query = "INSERT INTO mega_kurzy (jmeno,heslo) VALUES ('$username','$password')";
 }
 ?>
 </body>
