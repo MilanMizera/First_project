@@ -56,25 +56,24 @@
 <script src="js/bootstrap.js"> </script>
 
 <?php
+//kod pro vypisování chyb
+error_reporting(E_ALL);
+
 //odeslání dat z formuláře
 if (isset($_POST ["submit"])) {
   $username = $_POST["username"];
   $password = $_POST ["password"];
 
-  if (empty ($_POST ["password"]) || empty ($_POST ["username"]))
-  echo "<p class='paragraf'>Vyplnte všechna pole</p>";
+  if (empty ($_POST ["password"]) || empty ($_POST ["username"])) {
+    echo "<p class='paragraf'>Vyplnte všechna pole</p>";
+  }
 
+  else {
+  echo "<p class='para1'>Tvoje uživatelské jméno je $username</p>";
+  echo "<br>";
+  echo ("<p class='para2'>Tvoje heslo je $password</p>");
 }
-    if (!empty ($_POST ["username"]) && !empty ($_POST ["password"])){
-     echo "<p class='para1'>Tvoje uživatelské jméno je $username</p>";
-     echo "<br>";
-     echo ("<p class='para2'>Tvoje heslo je $password</p>");
 }
-// připojení do databáze
-$connection = mysqli_connect("localhost","root","","megakurzy");
-
-$query = "INSERT INTO mega_kurzy (jmeno,heslo) VALUES ('$username','$password')";
-
 ?>
 </body>
 </html>
