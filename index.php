@@ -76,8 +76,17 @@ echo ("<p class='para2'>Tvoje heslo je $password</p>");
  // připojení do databáze
  $connection = mysqli_connect("localhost","root","","megakurzy");
 
+ if (!$connection) {
+  echo ("nejsme propojeni s databází!");
+ }
+
  $query = "INSERT INTO mega_kurzy (jmeno,heslo) VALUES ('$username','$password')";
  $result = mysqli_query ($connection,$query);
+
+ if (!$result){
+  echo ("nejsme propojeni s tabulkou!");
+
+ }
 }
 ?>
 </body>
