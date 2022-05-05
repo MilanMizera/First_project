@@ -30,6 +30,11 @@
     font-size: 20px;
     margin-left: 40px;
 }
+.para3 {
+    color: red;
+    font-size: 20px;
+    margin-left: 40px;
+}
 
 </style>
     <header>
@@ -48,7 +53,7 @@
     <input type="password" name="password" class="form-control" id="exampleInputPassword1">
   </div>
   <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <input type="checkbox" name="check" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Souhlasím s osobníma údajema</label>
   </div>
   <button type="submit" name="submit" class="btn btn-primary">Odeslat</button>
@@ -68,24 +73,25 @@ if (isset($_POST ["submit"])) {
     echo "<p class='paragraf'>Vyplnte všechna pole</p>";
   }
 
-else {
-echo "<p class='para1'>Tvoje uživatelské jméno je $username</p>";
-echo "<br>";
-echo ("<p class='para2'>Tvoje heslo je $password</p>");
-}
- // připojení do databáze
- $connection = mysqli_connect("localhost","root","","megakurzy");
-
- if (!$connection) {
-  echo ("nejsme propojeni s databází!");
+  else {
+  echo "<p class='para1'>Tvoje uživatelské jméno je $username</p>";
+  echo "<br>";
+  echo ("<p class='para2'>Tvoje heslo je $password</p>");
  }
 
- $query = "INSERT INTO mega_kurzy (jmeno,heslo) VALUES ('$username','$password')";
- $result = mysqli_query ($connection,$query);
+ if (empty($_POST ["check"])){
+   echo "<p class='para3'>pro pokračování musíte souhlasit s osobníma údajema<p>";
+ }
+  // připojení do databáze
+  $connection = mysqli_connect("localhost","root","","megakurzy");
 
- if (!$result){
-  echo ("nejsme propojeni s tabulkou!");
+  if (!$connection) {
+  echo ("nejsme propojeni s databází!");
+  }
 
+  if (!empty ($password) && !empty ($username)) {
+  $query = "INSERT INTO mega_kurzy (jmeno,heslo) VALUES ('$username','$password')";
+  $result = mysqli_query ($connection,$query);
  }
 }
 ?>
