@@ -77,7 +77,7 @@ if (isset($_POST ["submit"])) {
   echo "<p class='para1'>Tvoje uživatelské jméno je $username</p>";
   echo "<br>";
   echo ("<p class='para2'>Tvoje heslo je $password</p>");
- }
+  }
 
  if (empty($_POST ["check"])){
    echo "<p class='para3'>pro pokračování musíte souhlasit s osobníma údajema<p>";
@@ -88,7 +88,7 @@ if (isset($_POST ["submit"])) {
   if (!$connection) {
   echo ("nejsme propojeni s databází!");
   }
-
+  //vložení dat do tabulky
   if (!empty ($password) && !empty ($username)) {
   $query = "INSERT INTO mega_kurzy (jmeno,heslo) VALUES ('$username','$password')";
   $result = mysqli_query ($connection,$query);
