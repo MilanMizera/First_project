@@ -42,7 +42,7 @@
         include "Header.php";
         ?>
     </header>
-    <h1 class="formtitle">Vychutnej si náš formulář</h1>
+    <h1 class="formtitle">Kontaktujte nás !</h1>
     <form method="post" action="index.php">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Uživatelské jméno</label>
