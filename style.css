@@ -1,18 +1,32 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
 /*hlavička*/
 .btn-login {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border: 2 px solid red ;
+
+    border: 20 px solid red ;
     text-decoration: none;
+    list-style-type: none;
     color: red;
-    width: 100%;
-    flex-grow: 0;
 }
 
-ul {
-    padding: 0px;
+.btn-login:hover {
+    color: rgb(255, 74, 74);
+}
+
+li {
+    list-style-type: none;
+}
+
+.navbar-expand-lg, .navbar-nav, .nav-link  {
     margin: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+
 }
 
 /*formulář*/
@@ -26,7 +40,6 @@ form {
     margin-top: 80px;
     margin-left: 60px;
     margin-bottom: 50px;
-    text-shadow: 15px 15px 1px;
 }
 
 .btn-primary:hover {
@@ -42,4 +55,10 @@ color: rgb(255, 255, 255);
 .paragraf {
     color: red;
     font-size: 30px;
+}
+ul li {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

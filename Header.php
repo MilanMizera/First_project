@@ -3,7 +3,7 @@
 </head>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Megakurzy</a>
     <ul>
     <li>
         <a class="btn-login" href="#">Přihlášení</a>
@@ -23,11 +23,11 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Kurzy</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Cena</a>
+          <a class="nav-link" href="#">Předplatné</a>
         </li>
 
       </ul>
