@@ -79,13 +79,15 @@
  </h2>
 <div class="supp-section">
  <div class="row">
-  <div class="col">
+  <div id="phone-space" class="col text-center">
+  <i class="bi bi-telephone-inbound"></i>
    <li class="li-phone">
-     <a class="supp-phone" href="tel:+420722552866">+420 722 552 866</a>
+     <a  class="supp-phone" href="tel:+420722552864">+420 722 552 864</a>
    </li>
 </div>
 
-<div class="col">
+<div class="col text-center">
+<i class="bi bi-envelope-check"></i>
 <li class="li-email">
      <a class="supp-email" href="mailto milan.mizera2323@gmail.com">milan.mizera2323@gmail.com</a>
 </li>

@@ -3,9 +3,18 @@
     padding: 0px;
     margin: 0px;
 }
+
 /*Hlavička*/
 .dropdown-toggle::after {
     color: blue;
+}
+.navbar-toggler {
+    background-color: #cacaca;
+
+}
+.navbar-toggler:active {
+border: 2px red;
+
 }
 
 .bi {
@@ -76,6 +85,7 @@
 .form-container {
     height: 200px;
 }
+
 .formularek {
     width: 40%;
     height: 400px;
@@ -104,15 +114,17 @@
     width: 100%;
     height: 800px;
 }
+
 /*Sekce pro kontaktování podpory*/
 .supp-section {
     display: flex;
     align-items: center;
     justify-content:center;
     width: 100%;
-    height: 200px;
+    height: 150px;
     background-color: rgb(219 238 180);
 }
+
 .supp-title {
     margin-bottom: 30px;
     text-align: center;
@@ -121,14 +133,40 @@
 .supp-email, .supp-phone {
     font-size: 20px;
     text-decoration: none;
+    color: black;
 } 
+
+.supp-email:hover, .supp-phone:hover {
+    color: rgb(26, 26, 26);
+}
+#phone-space {
+    margin-right: 100px;
+}
 .li-phone {
     text-align: right;
     list-style-type: none;
-    margin-right: 50px;
 }
 
 .li-email {
     text-align: left;
     list-style-type: none;
+}
+
+.bi.bi-telephone-inbound::before {
+    
+    font-size: 40px;
+    color: blue;
+    display: flex;
+    justify-content: center;
+    display: inline-block;
+}
+
+.bi-envelope-check::before {
+    font-size: 40px;
+    color: blue;
+    display: flex;
+    justify-content: center;
+    display: inline-block;
+
+
 }
