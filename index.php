@@ -76,6 +76,28 @@
 </form>
 </div>
 
+<?php
+
+//odeslání dat z formuláře
+if (isset($_POST ["submit"])) {
+  $username = $_POST["username"];
+  $password = $_POST ["password"];
+
+  if (empty ($_POST ["password"]) || empty ($_POST ["username"])) {
+    echo "<p class='all-do'>Vyplnte všechna pole</p>";
+  }
+
+  else {
+  echo "<p class='my-username'>Tvoje uživatelské jméno je $username</p>";
+  echo "<br>";
+  echo ("<p class='my-password'>Tvoje heslo je $password</p>");
+  }
+
+ if (empty($_POST ["check"])){
+   echo "<p class='my-check'>pro pokračování musíte souhlasit s osobníma údajema<p>";
+ }
+?>
+
 <!--Sekce s kontaktováním podpory-->
 <h2 class="supp-title">Nefunguje Vám formulář ? Kontaktujte naší podporu !
  </h2>
@@ -102,28 +124,6 @@
 <script src="js/bootstrap.js"> </script>
 
 <?php
-//kod pro vypisování chyb
-error_reporting(E_ALL);
-
-//odeslání dat z formuláře
-if (isset($_POST ["submit"])) {
-  $username = $_POST["username"];
-  $password = $_POST ["password"];
-
-  if (empty ($_POST ["password"]) || empty ($_POST ["username"])) {
-    echo "<p class='all-do'>Vyplnte všechna pole</p>";
-  }
-
-  else {
-  echo "<p class='my-username'>Tvoje uživatelské jméno je $username</p>";
-  echo "<br>";
-  echo ("<p class='my-password'>Tvoje heslo je $password</p>");
-  }
-
- if (empty($_POST ["check"])){
-   echo "<p class='my-check'>pro pokračování musíte souhlasit s osobníma údajema<p>";
- }
-
   // připojení do databáze
   $connection = mysqli_connect("localhost","root","","megakurzy");
 
