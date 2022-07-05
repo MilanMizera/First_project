@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +12,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head> 
+
 <body>
+
+<script src="js/bootstrap.js"> </script>
+
 <style> 
 /*Stylování echo textu*/ 
 .all-do {
@@ -77,7 +82,6 @@
 </div>
 
 <?php
-
 //odeslání dat z formuláře
 if (isset($_POST ["submit"])) {
   $username = $_POST["username"];
@@ -93,10 +97,24 @@ if (isset($_POST ["submit"])) {
   echo ("<p class='my-password'>Tvoje heslo je $password</p>");
   }
 
- if (empty($_POST ["check"])){
+  if (empty($_POST ["check"])){
    echo "<p class='my-check'>pro pokračování musíte souhlasit s osobníma údajema<p>";
+  }
+
+  // připojení do databáze
+  $connection = mysqli_connect("localhost","root","","megakurzy");
+
+  if (!$connection) {
+  echo ("nejsme propojeni s databází!");
+  }
+
+  //vložení dat do tabulky
+  if (!empty ($password) && !empty ($username)) {
+  $query = "INSERT INTO mega_kurzy (jmeno,heslo) VALUES ('$username','$password')";
+  $result = mysqli_query ($connection,$query);
  }
-?>
+ }
+ ?>
 
 <!--Sekce s kontaktováním podpory-->
 <h2 class="supp-title">Nefunguje Vám formulář ? Kontaktujte naší podporu !
@@ -118,26 +136,5 @@ if (isset($_POST ["submit"])) {
 </div>
 </div>
 </div>
-
-
-
-<script src="js/bootstrap.js"> </script>
-
-<?php
-  // připojení do databáze
-  $connection = mysqli_connect("localhost","root","","megakurzy");
-
-  if (!$connection) {
-  echo ("nejsme propojeni s databází!");
-  }
-
-  //vložení dat do tabulky
-  if (!empty ($password) && !empty ($username)) {
-  $query = "INSERT INTO mega_kurzy (jmeno,heslo) VALUES ('$username','$password')";
-  $result = mysqli_query ($connection,$query);
- }
-
-}
-?>
 </body>
 </html>
