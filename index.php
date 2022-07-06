@@ -98,7 +98,7 @@ if (isset($_POST ["submit"])) {
   }
 
   if (empty($_POST ["check"])){
-   echo "<p class='my-check'>pro pokračování musíte souhlasit s osobníma údajema<p>";
+   echo "<p class='my-check'>pro pokračování musíte souhlasit s osobníma údajema</p>";
   }
 
   // připojení do databáze
