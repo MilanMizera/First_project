@@ -26,6 +26,7 @@
     margin-top: 20px;
     margin-left: 40px;
 }
+
 .my-username {
     text-align:center;
     color: green;
@@ -34,12 +35,14 @@
     margin-left: 40px;
     margin-bottom: 0px;
 }
+
 .my-password {
     text-align:center;
     color: green;
     font-size: 15px;
     margin-left: 40px;
 }
+
 .my-check {
     text-align:center;
     color: red;
