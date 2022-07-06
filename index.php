@@ -14,7 +14,6 @@
 </head> 
 
 <body>
-
 <script src="js/bootstrap.js"> </script>
 
 <style> 
@@ -80,11 +79,9 @@
   <button type="submit" name="submit" class="btn btn-primary">Odeslat</button>
 <div class="my-check">
 <p class="my-check"></p>
-</div>
-</form>
-</div>
 
 <?php
+error_reporting(E_ALL);
 //odeslání dat z formuláře
 if (isset($_POST ["submit"])) {
   $username = $_POST["username"];
@@ -118,6 +115,9 @@ if (isset($_POST ["submit"])) {
  }
  }
  ?>
+</div>
+</form>
+</div>
 
 <!--Sekce s kontaktováním podpory-->
 <h2 class="supp-title">Nefunguje Vám formulář ? Kontaktujte naší podporu !
