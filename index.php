@@ -83,9 +83,9 @@
 <?php
 error_reporting(E_ALL);
 //odeslání dat z formuláře
-if (isset($_POST ["submit"])) {
+if (isset($_POST["submit"])) {
   $username = $_POST["username"];
-  $password = $_POST ["password"];
+  $password = $_POST["password"];
 
   if (empty ($_POST ["password"]) || empty ($_POST ["username"])) {
     echo "<p class='all-do'>Vyplnte všechna pole</p>";
@@ -107,10 +107,17 @@ if (isset($_POST ["submit"])) {
   if (!$connection) {
   echo ("nejsme propojeni s databází!");
   }
-
+  
   //vložení dat do tabulky
   if (!empty ($password) && !empty ($username)) {
-  $query = "INSERT INTO mega_kurzy (jmeno,heslo) VALUES ('$username','$password')";
+
+  //Hešování hesla
+  $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
+
+  //vložení hodnot z formuláře do tabulky databáze
+  $query = "INSERT INTO mega_kurzy (jmeno,heslo) VALUES ('$username','$hashedpassword')";
+
+  //odeslání dat
   $result = mysqli_query ($connection,$query);
  }
  }
