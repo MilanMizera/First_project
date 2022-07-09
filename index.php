@@ -62,7 +62,7 @@
 
      <script type="text/javascript">
       var i=0,text;
-      text = "Zadehte Vaše údaje !"
+      text = "Zadejte Vaše údaje !"
       function typing() {
         if(i<text.length) {
           document.getElementById("text").innerHTML += text.charAt(i);
