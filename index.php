@@ -58,7 +58,8 @@
     </header>
 
     <div class form-container>
-     <h1 class="formtitle">Zadejte Vaše údaje !</h1>
+     <h1 class="formtitle"></h1>
+
 
      <form class="formularek" method="post" action="index.php">
      <div class="mb-3">
