@@ -5,24 +5,15 @@
 }
 
 /*Hlavička*/
+
+/*Hamburger*/
+.bi-list::before {
+font-size: 40px;
+color: black;
+}
+
 .dropdown-toggle::after {
     color: blue;
-}
-.navbar-toggler {
-    background-color: #cacaca;
-
-}
-.navbar-toggler:active {
-border: 2px red;
-
-}
-
-.bi {
-    font-size: 20px;
-    color: blue;
-    display: flex;
-    justify-content: center;
-    display: inline-block;
 }
 
 .dropdown-item:hover {
@@ -82,6 +73,15 @@ border: 2px red;
 }
 
 /*formulář*/
+
+.all-do {
+    text-align:center;
+    color: rgb(25, 0, 148);
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 40px;
+    }
+
 .form-container {
     height: 200px;
 }
@@ -170,3 +170,25 @@ border: 2px red;
 
 
 }
+
+/*@media queries*/
+@media only screen and (max-width: 991px){
+    .supp-title {
+        font-size: 20px;
+}
+}
+
+/*odkazy v hambáči*/
+@media only screen and (max-width: 991px){
+    .nav-link {
+        text-align: center;
+}
+}
+
+@media only screen and (max-width: 991px){
+    .supp-email, .supp-phone {
+        font-size: 15px !important; 
+}
+}
+
+
