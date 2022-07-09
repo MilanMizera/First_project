@@ -58,13 +58,14 @@
     </header>
 
     <div class form-container>
-     <h1 class="formtitle"></h1>
+    <div id="text"></div>
+
      <script type="text/javascript">
-      let i=0,text;
-      text="Zadehte Vaše údaje !"
-      function typing () {
+      var i=0,text;
+      text = "Zadehte Vaše údaje !"
+      function typing() {
         if(i<text.length) {
-          document.getElementsByClassName("formtitle").innerHTML += text.charAt(i);
+          document.getElementById("text").innerHTML += text.charAt(i);
           i++;
           setTimeout(typing,50);
         }
