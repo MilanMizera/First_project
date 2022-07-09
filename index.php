@@ -59,7 +59,18 @@
 
     <div class form-container>
      <h1 class="formtitle"></h1>
-
+     <script type="text/javascript">
+      let i=0,text;
+      text="Zadehte Vaše údaje !"
+      function typing () {
+        if(i<text.length) {
+          document.getElementsByClassName("formtitle").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typing,50);
+        }
+      }
+      typing();
+     </script>
 
      <form class="formularek" method="post" action="index.php">
      <div class="mb-3">
