@@ -14,7 +14,7 @@
         
     <li class="nav-item">
      <a class="nav-link active" aria-current="page" href="#">Domů
-     <i class="bi bi-arrow-right-short"></i>
+      <i class="bi bi-arrow-right-short"></i>
      </a>
     </li>
 
