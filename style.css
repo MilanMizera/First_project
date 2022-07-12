@@ -197,3 +197,11 @@ color: black;
         box-shadow: none !important; 
 }
 }
+
+@media only screen and (max-width: 991px){
+
+    .container-fluid {
+background-size: auto;
+background-position: 10% 40%;
+}
+}
