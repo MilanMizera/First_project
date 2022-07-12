@@ -221,3 +221,24 @@ color: black;
         background-position: 75% 44%;
  }
  }
+
+ @media only screen and (max-width: 991px) {
+
+    .formularek {
+        height: 350px;
+ }
+ }
+
+ @media only screen and (max-width: 991px) {
+
+    .form-title {
+        margin-top: 80px;
+ }
+ }
+ 
+ @media only screen and (max-width: 991px) {
+
+    .bi.bi-telephone-inbound::before, .bi-envelope-check::before {
+        font-size: 30px; 
+ }
+ }
