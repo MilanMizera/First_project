@@ -58,21 +58,7 @@
     </header>
 
     <div class form-container>
-    <div id="text"></div>
-
-     <script type="text/javascript">
-      var i=0,text;
-      text = "Zadejte Vaše údaje !"
-      function typing() {
-        if(i<text.length) {
-          document.getElementById("text").innerHTML += text.charAt(i);
-          i++;
-          setTimeout(typing,50);
-        }
-      }
-      typing();
-     </script>
-
+    <h1>Zadejte Vaše údaje !</h1>
      <form class="formularek" method="post" action="index.php">
      <div class="mb-3">
      <label for="exampleInputEmail1" class="form-label">Uživatelské jméno</label>
