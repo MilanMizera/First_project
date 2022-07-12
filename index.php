@@ -58,7 +58,7 @@
     </header>
 
     <div class form-container>
-    <h1>Zadejte Vaše údaje !</h1>
+    <h1 class="form-title">Zadejte Vaše údaje !</h1>
      <form class="formularek" method="post" action="index.php">
      <div class="mb-3">
      <label for="exampleInputEmail1" class="form-label">Uživatelské jméno</label>
