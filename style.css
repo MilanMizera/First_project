@@ -179,6 +179,13 @@ color: black;
 }
 }
 
+@media only screen and (max-width: 600px) {
+    .supp-title {
+        margin: 0px 50px;
+        margin-bottom: 20px;
+}
+}
+
 /*odkazy v hambáči*/
 @media only screen and (max-width: 991px) {
     .nav-link {
