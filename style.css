@@ -13,6 +13,7 @@ color: black;
 
 .bi-arrow-right-short {
     color: blue;
+    margin-right: 5px;
 }
 
 
@@ -154,7 +155,6 @@ color: black;
 }
 
 .bi.bi-telephone-inbound::before {
-    
     font-size: 40px;
     color: blue;
     display: flex;
@@ -171,26 +171,28 @@ color: black;
 }
 
 /*@media queries*/
-@media only screen and (max-width: 991px){
+@media only screen and (max-width: 991px) {
     .supp-title {
         font-size: 20px;
+        margin: 0px 10px;
+        margin-bottom: 15px;
 }
 }
 
 /*odkazy v hambáči*/
-@media only screen and (max-width: 991px){
+@media only screen and (max-width: 991px) {
     .nav-link {
         text-align: center;
 }
 }
 
-@media only screen and (max-width: 991px){
+@media only screen and (max-width: 991px) {
     .supp-email, .supp-phone {
         font-size: 15px !important; 
 }
 }
 
-@media only screen and (max-width: 991px){
+@media only screen and (max-width: 991px) {
 
     .navbar-toggler:focus {
         border: none !important;
@@ -198,10 +200,24 @@ color: black;
 }
 }
 
-@media only screen and (max-width: 991px){
+@media only screen and (max-width: 991px) {
+
+   .container-fluid {
+       background-size: auto;
+       background-position: 10% 40%;
+}
+}
+
+@media only screen and (max-width: 991px) {
+
+   #phone-space {
+       margin-right: 50px;
+}
+}
+
+@media only screen and (max-width: 830px) {
 
     .container-fluid {
-background-size: auto;
-background-position: 10% 40%;
-}
-}
+        background-position: 75% 44%;
+ }
+ }
