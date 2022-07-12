@@ -14,13 +14,15 @@
         
     <li class="nav-item">
      <a class="nav-link active" aria-current="page" href="#">Domů
-     <i class="bi bi-arrow-right-short"></i>
+     <i class="bi bi-arrow-left-short"></i>
      </a>
     </li>
 
         <li class="nav-item">
-         <a class="nav-link" href="#"> <i class="bi bi-arrow-right-short"></i>Cena
-         </a>
+         <a class="nav-link" href="#">Cena
+         <i class="bi bi-arrow-left-short"></i>
+        </a>
+         
         </li>
 
         <li class="nav-item dropdown">

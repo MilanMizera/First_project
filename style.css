@@ -11,7 +11,7 @@ font-size: 40px;
 color: black;
 }
 
-.bi-arrow-right-short {
+.bi-arrow-left-short {
     color: blue;
     margin-right: 5px;
 }
@@ -205,6 +205,7 @@ color: black;
    .container-fluid {
        background-size: auto;
        background-position: 10% 40%;
+    
 }
 }
 
@@ -242,3 +243,34 @@ color: black;
         font-size: 30px; 
  }
  }
+
+ @media only screen and (max-width: 991px) {
+
+    .form-control {
+        width: 100%;
+ }
+ }
+
+ @media only screen and (max-width: 991px) {
+
+    .d-flex {
+        display: flex !important;
+        align-content: center;
+        justify-content: center;
+    }
+ }
+
+ @media only screen and (max-width: 991px) {
+
+    .form-check-label {
+        font-size: 12px;
+    }
+ }
+ 
+ @media only screen and (max-width: 991px) {
+
+    .supp-section {
+        height: 100px;
+    }
+ }
+ 
