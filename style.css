@@ -5,15 +5,20 @@
 }
 
 /*Hlavička*/
-
 /*Hamburger*/
 .bi-list::before {
 font-size: 40px;
 color: black;
 }
 
+.bi-arrow-right-short {
+    color: blue;
+}
+
+
 .dropdown-toggle::after {
     color: blue;
+    font-size: 15px;
 }
 
 .dropdown-item:hover {
@@ -37,10 +42,6 @@ color: black;
 
 .nav-link {
     color: black;
-}
-
-.navbar a:active {
-    color: rgb(201, 0, 0);
 }
 
 .nav-link:hover {
@@ -73,7 +74,6 @@ color: black;
 }
 
 /*formulář*/
-
 .all-do {
     text-align:center;
     color: rgb(25, 0, 148);
@@ -126,12 +126,13 @@ color: black;
 }
 
 .supp-title {
+    font-size: 25px;
     margin-bottom: 30px;
     text-align: center;
 }
 
 .supp-email, .supp-phone {
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: none;
     color: black;
 } 
@@ -167,8 +168,6 @@ color: black;
     display: flex;
     justify-content: center;
     display: inline-block;
-
-
 }
 
 /*@media queries*/
