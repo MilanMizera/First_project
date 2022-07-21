@@ -81,6 +81,7 @@
 
 <?php
 error_reporting(E_ALL);
+
 //odeslání dat z formuláře
 if (isset($_POST["submit"])) {
   $username = $_POST["username"];
@@ -133,16 +134,17 @@ if (isset($_POST["submit"])) {
   <div id="phone-space" class="col text-center">
   <i class="bi bi-telephone-inbound"></i>
    <li class="li-phone">
-     <a  class="supp-phone" href="tel:+420722552864">+420 722 552 864</a>
+     <a class="supp-phone" href="tel:+420722552864">+420 722 552 864</a>
    </li>
 </div>
 
 <div class="col text-center">
 <i class="bi bi-envelope-check"></i>
 <li class="li-email">
-     <a class="supp-email" href="mailto milan.mizera2323@gmail.com">milan.mizera2323@gmail.com</a>
+<a class="supp-email" href="mailto milan.mizera2323@gmail.com">milan.mizera2323@gmail.com</a>
 </li>
 </div>
+
 </div>
 </div>
 </body>

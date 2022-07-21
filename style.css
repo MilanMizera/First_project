@@ -1,14 +1,14 @@
 * {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 0px;
-    margin: 0px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     padding: 0px;
+     margin: 0px;
 }
 
 /*Hlavička*/
 /*Hamburger*/
 .bi-list::before {
-font-size: 40px;
-color: black;
+    font-size: 40px;
+    color: black;
 }
 
 .bi-arrow-left-short {
