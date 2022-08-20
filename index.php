@@ -15,7 +15,7 @@
 </head> 
 
 <body>
-  <script src="bootstrap/js/bootstrap.js"> </script>
+<script src="bootstrap/js/bootstrap.js"> </script>
 
 <style> 
 /*Stylování echo textu*/ 
@@ -59,58 +59,59 @@
     </header>
 
     <div class form-container>
-    <h1 class="form-title">Zadejte Vaše údaje !</h1>
-     <form class="formularek" method="post" action="index.php">
-     <div class="mb-3">
-     <label for="exampleInputEmail1" class="form-label">Uživatelské jméno</label>
-     <input type="text" name="username" class="form-control" id="exampleInputText" div>
-  </div>
+      <h1 class="form-title">Zadejte Vaše údaje !</h1>
+      <form class="formularek" method="post" action="index.php">
+      <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Uživatelské jméno</label>
+      <input type="text" name="username" class="form-control" id="exampleInputText" div>
+   </div>
 
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Heslo</label>
-    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+     <label for="exampleInputPassword1" class="form-label">Heslo</label>
+     <input type="password" name="password" class="form-control" id="exampleInputPassword1">
   </div>
 
   <div class="mb-3 form-check">
-    <input type="checkbox" name="check" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Souhlasím s osobníma údajema</label>
+     <input type="checkbox" name="check" class="form-check-input" id="exampleCheck1">
+     <label class="form-check-label" for="exampleCheck1">Souhlasím s osobníma údajema</label>
   </div>
   
   <button type="submit" name="submit" class="btn btn-primary">Odeslat</button>
-<div class="my-check">
-<p class="my-check"></p>
+  <div class="my-check"></div>
+  <p class="my-check"></p>
 
 <?php
 error_reporting(E_ALL);
 
 //odeslání dat z formuláře
-if (isset($_POST["submit"])) {
+if (isset($_POST["submit"])) 
+{
   $username = $_POST["username"];
   $password = $_POST["password"];
 
-  if (empty ($_POST ["password"]) || empty ($_POST ["username"])) {
+  if (empty ($_POST ["password"]) || empty ($_POST ["username"]) || empty($_POST ["check"])) 
+  {
     echo "<p class='all-do'>Vyplnte všechna pole</p>";
   }
 
-  else {
+  else 
+  {
   echo "<p class='my-username'>Tvoje uživatelské jméno je $username</p>";
   echo "<br>";
   echo ("<p class='my-password'>Tvoje heslo je $password</p>");
   }
 
-  if (empty($_POST ["check"])){
-   echo "<p class='my-check'>pro pokračování musíte souhlasit s osobníma údajema</p>";
-  }
-
   // připojení do databáze
   $connection = mysqli_connect("localhost","root","","megakurzy");
 
-  if (!$connection) {
+  if (!$connection) 
+  {
   echo ("nejsme propojeni s databází!");
   }
   
   //vložení dat do tabulky
-  if (!empty ($password) && !empty ($username)) {
+  if (!empty ($password) && !empty ($username)) 
+  {
 
   //Hešování hesla
   $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
@@ -121,7 +122,7 @@ if (isset($_POST["submit"])) {
   //odeslání dat
   $result = mysqli_query ($connection,$query);
  }
- }
+}
  ?>
 </div>
 </form>
